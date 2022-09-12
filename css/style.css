@@ -169,7 +169,7 @@ header {
 
     min-height: 90vh; /* RESTAR: 100vh - header { min-height: 10vh; } = 90vh  */
     width: 100%;
-    background-image: url('/assets/img/hero_image_2.jpg');
+    background-image: url('assets/img/hero_image_2.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -607,7 +607,7 @@ footer {
         padding-top: 10%;
         padding-left: 10%;
 
-        background-image: url('/assets/img/hero_image_1.jpeg');
+        background-image: url('assets/img/hero_image_1.jpeg');
     }
 
     /* -------------------- CARDS: Pedidos en Linea -------------------- */

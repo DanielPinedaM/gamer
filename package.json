@@ -1,10 +1,10 @@
 {
-  "name": "Gamer",
+  "name": "gamer",
   "version": "1.0.0",
   "description": "Diseño de la interfaz gráfica de una página web Responsive en HTML 5 y CSS 3 para la venta de computadores :computer:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d ."
   },
   "keywords": [],
   "author": "",
