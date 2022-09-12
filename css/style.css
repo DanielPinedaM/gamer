@@ -1,0 +1,692 @@
+/* -------------------- Videos con interfaz grafica (diseño) de la pagina web -------------------- */
+
+/*
+https://www.youtube.com/watch?v=dX4SsNxYtWs&list=PLggiJKmZtpaJXLWGjDgG6XfTFMvJdCuHd&index=296
+
+https://www.youtube.com/watch?v=x4PV2N663mU&list=PLggiJKmZtpaJXLWGjDgG6XfTFMvJdCuHd&index=297
+*/
+
+/* -------------------- Reset CSS -------------------- */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html { font-size: 16px; }
+
+/* -------------------- Reset :autofill -------------------- */
+
+/* https://gist.github.com/Menma27/49f2decc039c8c34f99f3aca8da7c17e */
+
+input:-webkit-autofill,
+input:-webkit-autofill::first-line,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:indeterminate,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:indeterminate,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus select:-webkit-autofill:indeterminate {
+    color: #fff !important;
+    font-weight: normal;
+    font-size: var(--step-1);
+    font-family: "Raleway", sans-serif !important;
+
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset;
+    border-color: rgba(255, 255, 255, 0);
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;
+    -o-transition: background-color 5000s ease-in-out 0s;
+    filter: none;
+    -webkit-filter: none;
+}
+
+/* -------------------- Utopia Fluid Responsive Design -------------------- */
+/* @link https://utopia.fyi/type/calculator?c=320,17,1.2,1500,20,1.333,8,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+    --step--1: clamp(0.89rem, calc(0.87rem + 0.07vw), 0.94rem);
+    --step-0: clamp(1.06rem, calc(1.01rem + 0.25vw), 1.25rem);
+    --step-1: clamp(1.28rem, calc(1.17rem + 0.53vw), 1.67rem);
+    --step-2: clamp(1.53rem, calc(1.34rem + 0.94vw), 2.22rem);
+    --step-3: clamp(1.84rem, calc(1.53rem + 1.52vw), 2.96rem);
+    --step-4: clamp(2.20rem, calc(1.73rem + 2.36vw), 3.95rem);
+    --step-5: clamp(2.64rem, calc(1.93rem + 3.55vw), 5.26rem);
+    --step-6: clamp(3.17rem, calc(2.13rem + 5.21vw), 7.01rem);
+    --step-7: clamp(3.81rem, calc(2.30rem + 7.51vw), 9.35rem);
+    --step-8: clamp(4.57rem, calc(2.43rem + 10.70vw), 12.46rem);
+}
+
+/* -------------------- estilos generales de <html> y <body> -------------------- */
+
+html,
+body {
+    color:#fff;
+    background-color: #17181b;
+    font-family: "Raleway", sans-serif;
+}
+
+/* -------------------- imagenes Responsive -------------------- */
+/* https://www.youtube.com/watch?v=udGrXWeJp1Y&t=4090s */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    object-fit: cover !important;
+}
+
+/* -------------------- Animacion al cargar la pagina web -------------------- */
+
+/* https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load#comment100899884_12638711 */
+@keyframes animacion_header {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+header { animation: 2s ease-out 0s 1 animacion_header; }
+
+
+/* Generador de animaciones CSS:
+https://webcode.tools/generators/css/keyframe-animation */
+@keyframes animacion_hero_image {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.hero_image { animation: animacion_hero_image 1.5s ease 0s 1 normal forwards; }
+
+/* -------------------- sub-titulos <h2> -------------------- */
+
+.h2_pedidos_en_linea,
+.h2_galeria {
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+
+    text-align: center;
+    font-size: var(--step-3);
+}
+
+/* -------------------- encabezado <header> -------------------- */
+
+header {
+    min-height: 10vh;
+    background-color:  rgb(29, 33, 36);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_contenedor_barra_navegacion {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_contenedor_barra_navegacion > h1 {
+    font-size: var(--step-3);
+    font-weight: 900;
+}
+
+/* -------------------- computador de fondo -------------------- */
+/* https://css-tricks.com/perfect-full-page-background-image/ */
+
+.hero_image {
+    padding-top: 30%;
+
+    text-align: center;
+
+    min-height: 90vh; /* RESTAR: 100vh - header { min-height: 10vh; } = 90vh  */
+    width: 100%;
+    background-image: url('/assets/img/hero_image_2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contenedor_formulario {
+    position: sticky;
+    top: 0;
+}
+
+/* Pide un producto */
+.contenedor_formulario h2 {
+    margin-bottom: 0.625rem;
+    font-size: var(--step-3);
+    font-weight: 700;
+}
+
+/* Todos los pedidos con descuento */
+.contenedor_formulario p {
+    margin-bottom: 0.3125rem;
+    font-size: var(--step-1);
+    font-weight: 700;
+}
+
+/* -------------------- buscar producto -------------------- */
+
+.flex_contenedor_buscar {
+    max-width: 18.75rem;
+    background-color: #ffffff;
+    border-radius: 1.875rem;
+    padding: 3px 10px 3px 10px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div_lupa_input { flex-grow: 1; }
+
+.div_lupa_input input[type="search"] {
+    width: 100%;
+    border: 0;
+    outline: 0;
+
+    /* ¿Que quieres comprar? */
+    font-size: var(--step-0);
+}
+
+/* ¿Que quieres comprar? */
+.div_lupa_input input[type="search"]::placeholder { text-align: center; }
+
+/* reset CSS:
+Ocultar la X q aparece al lado derecho de los input[type="search"]
+
+https://stackoverflow.com/questions/20804016/editing-input-type-search-pseudo-element-button-x */
+.div_lupa_input input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.div_lupa_imagen button[type="submit"] {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+}
+
+.div_lupa_imagen button[type="submit"],
+.div_lupa_imagen img { cursor: pointer; }
+
+/* -------------------- barra azul: nuevos productos, somos expertos, envios gratis -------------------- */
+
+.barra {
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+
+    font-size: var(--step-1);
+    text-align: center;
+
+    background: -webkit-linear-gradient(left, #0041aa 0%, #00bbbb 100%);
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* -------------------- Centrar contenido principal <main> de la pagina web (Responsive) -------------------- */
+
+.page_wrap {
+    max-width: min(90%, 1332px);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -------------------- CARDS: Pedidos en Linea -------------------- */
+
+.flex_contenedor_card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    /* hacer q las cards tengan el mismo alto height:
+    https://stackoverflow.com/questions/69255056/how-to-make-all-children-items-the-same-height-in-the-flexbox-as-the-one-that-c */
+    align-items: stretch;
+
+    row-gap: 30px;
+    column-gap: 10px;
+}
+
+/* desde 0 hasta 479px */
+.card {
+    border-radius: 0.9375rem;
+    box-shadow: 0px 0px 8px -2px #fff;
+
+    /* (100% ancho del <div class="page_wrap">) / (1 columna de Flex Items) = 100% */
+    flex: 0 0 100%;
+}
+
+.card_imagen {
+    height: 19rem;
+    border-radius: 0.9375rem;
+}
+
+.card_imagen img {
+    height: 19rem;
+    width: 100%;
+    border-radius: 0.9375rem;
+}
+
+.descripcion {
+    /* hacer q las cards tengan el mismo alto height:
+    https://www.imarketinx.de/artikel/equal-height-columns-with-css-grid-layout.html */
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 100%;
+    row-gap: 0.625rem;
+}
+
+/* Pc Gamer... */
+.descripcion h5 {
+    text-align: center;
+    font-size: var(--step-2);
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Envio Gratis */
+.descripcion h6 { font-size: var(--step-0); }
+
+/* estrellas amarillas */
+.contenedor_estrellas {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* precio $ */
+.flex_precio {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.precio_antes {
+    text-decoration-line: line-through;
+    font-size: var(--step-0);
+}
+
+.precio_ahora { font-size: var(--step-1); }
+
+.anadir_al_carrito,
+.enviar {
+    display: block;
+
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+
+    text-decoration: none;
+    font-weight: 900;
+    font-size: var(--step-1);
+    text-align: center;
+    color: #fff;
+    border-radius: 2rem;
+    background-color: #0199ff;
+}
+
+/*
+SOLUCION A ERROR DE :hover
+https://www.smashingmagazine.com/2022/03/guide-hover-pointer-media-queries/
+
+https://stackoverflow.com/questions/59206624/disable-hover-on-mobile-and-tablet-devices
+
+
+para dispositivos q SI tengan cursor (computadores) */
+@media screen and (hover: hover) and (pointer: fine) {
+    .anadir_al_carrito:hover,
+    .enviar:hover {
+        outline: 0.3125rem solid #fff;
+        background-color: #05445e;
+    }
+}
+
+/* para dispositivos con pantalla tactil (tablets y celulares) */
+@media screen and (pointer: coarse), (pointer: none), (hover: none) {
+    .anadir_al_carrito:active,
+    .enviar:active {
+        outline: 0.3125rem solid #fff;
+        background-color: #05445e;
+    }
+}
+
+/* Eliminar color azul cuando se hace click en los enlaces <a>
+https://stackoverflow.com/questions/21003535/anyway-to-prevent-the-blue-highlighting-of-elements-in-chrome-when-clicking-quic */
+.anadir_al_carrito,
+.enviar { -webkit-tap-highlight-color: transparent; }
+
+/* -------------------- Galeria de Imagenes (Masonry Layout) Usando Flexbox -------------------- */
+
+/* CSS-Tricks (Trucos CSS)
+https://css-tricks.com/adaptive-photo-layout-with-flexbox/#aa-demo */
+
+.flex_container_gallery {
+    width: 100%;
+    list-style-type: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_container_gallery li {
+    height: 40vh;
+    flex-grow: 1;
+}
+
+.flex_container_gallery img {
+    max-width: none;
+    min-width: 100%;
+    max-height: 100%;
+
+    vertical-align: bottom;
+}
+
+/* https://css-tricks.com/adaptive-photo-layout-with-flexbox/#aa-last-row-stretchiness */
+.flex_container_gallery .empty_item { flex-grow: 10; }
+
+/* -------------------- Formulario Contactanos -------------------- */
+
+/*
+https://freefrontend.com/css-contact-forms/
+https://codepen.io/ZachSaucier/pen/jOwNvO
+*/
+
+.h2_contactanos {
+    margin-bottom: 0.9375rem;
+    hyphens: auto;
+    text-align: center;
+    font-size: var(--step-3);
+}
+
+.formulario_contactanos {
+    max-width: 26.25rem; /* viewport de celulares 26.25rem = 420px */
+    min-height: 100vh;
+
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.9375rem;
+}
+
+.formulario_contactanos input,
+.formulario_contactanos textarea {
+    width: 90%;
+    padding: 0.625rem;
+
+    outline: 0.01px solid #fff;
+    border: 0;
+    border-radius: 0.625rem;
+
+    font-family: "Raleway", sans-serif;
+    font-size: var(--step-1);
+
+    color:#fff;
+    box-shadow: 0px 0px 8px -2px #fff;
+    background-color: transparent;
+}
+
+.formulario_contactanos input:focus,
+.formulario_contactanos textarea:focus {
+    outline: 2px solid #fff;
+    box-shadow: inset 0px 0px 8px -2px #fff;
+}
+
+.enviar {
+    width: 85%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.enviar:active {
+    position: relative;
+    top: 0.3125rem;
+}
+
+/* -------------------- pie de pagina <footer> -------------------- */
+
+footer {
+    width: 95vw;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.625rem;
+
+    border-radius: 0.9375rem;
+    box-shadow: inset 0px 0px 8px -2px #fff;
+    background-color: rgb(29, 33, 36);
+}
+
+.footer_lista {
+    list-style-type: none;
+    text-decoration-line: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 0.9375rem;
+}
+
+.footer_enlace {
+    color: #fff;
+    font-size: var(--step-0);
+    text-decoration-line: none;
+    hyphens: auto;
+
+    flex-grow: 1;
+}
+
+.footer_lista li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; /* centrar verticalmente el texto del <footer> Pedidos a domicilio, Pedidos por telefono... */
+    flex: 0 0 100%;
+    column-gap: 0.625rem;
+}
+
+.icono_lista {
+    display: inline-block;
+    width: 1.875rem;
+}
+
+@media screen and (hover: hover) and (pointer: fine) {
+    .footer_enlace:hover {
+        color: #05445e;
+        font-weight: 900;
+    }
+
+    .footer_lista li:hover {
+        position: relative;
+        bottom: 0.4375rem;
+    }
+}
+
+@media screen and (pointer: coarse), (pointer: none), (hover: none) {
+    .footer_enlace:active {
+        color: #05445e;
+        font-weight: 900;
+    }
+
+    .footer_lista li:active {
+        position: relative;
+        bottom: 0.4375rem;
+    }
+}
+
+/* --------------------
+                ○                            ○
+█▀▄▀█ █▀▀ █▀▄ █ ▄▀█    █▀█ █░█ █▀▀ █▀█ █ █▀▀ █▀
+█░▀░█ ██▄ █▄▀ █ █▀█   ▀▀█ █▄█ ██▄ █▀▄ █ ██▄ ▄█
+█   █                      █
+-------------------- */
+
+/* -------------------- Pide un producto -------------------- */
+
+@media screen and (min-width: 10.875em) { /* ancho viewport >= 174px = 10.875em */
+    .contenedor_formulario h2 {
+        font-size: var(--step-4);
+    }
+}
+
+/* -------------------- buscar producto -------------------- */
+
+@media screen and (max-width: 30em) { /* ancho viewport <= 480px = 30em */
+    .flex_contenedor_buscar {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* -------------------- encabezado <header> -------------------- */
+
+@media screen and (min-width: 14.375em) { /* ancho viewport >= 230px = 14.375rem */
+    .flex_contenedor_barra_navegacion {
+        width: 80%;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+}
+
+/* -------------------- descripcion (texto) de las cards -------------------- */
+
+@media screen and (max-width: 30em) { /* ancho viewport <= 30em = 480px */
+    .descripcion { padding: 5%; }
+}
+
+
+
+@media screen and (min-width: 30em) {
+
+    /* -------------------- computador de fondo -------------------- */
+
+    .hero_image { /* ancho viewport >= 480px = 30em hasta infinito */
+        display: block;
+        text-align: initial;
+
+        padding-top: 10%;
+        padding-left: 10%;
+
+        background-image: url('/assets/img/hero_image_1.jpeg');
+    }
+
+    /* -------------------- CARDS: Pedidos en Linea -------------------- */
+
+    .descripcion { /* ancho viewport >= 480px = 30em hasta infinito */
+
+        /* hacer q las cards tengan el mismo alto height:
+        4.5313rem es la altura maxima del texto q dice "Pc Gamer" */
+        grid-auto-rows: 4.5313rem min-content min-content min-content min-content;
+    }
+
+    .card {
+        box-shadow: inset 0px 0px 8px -2px #fff; /* ancho viewport >= 480px = 30em hasta infinito */
+
+        /* hacer q las cards sean mas pequeñas */
+        padding: 1.5%; /* ancho viewport >= 480px = 30em hasta infinito */
+
+        /* (100% ancho del <div class="page_wrap">) / (2 columnas de Flex Items) = 50%
+        (50%) - (10px de la propiedad column-gap: ) */
+        flex: 0 0 calc(50% - 10px); /* desde 480px = 30em hasta 767px */
+    }
+
+    /* -------------------- pie de pagina <footer> -------------------- */
+    .footer_lista li { flex: 0 0 50%; } /* ancho viewport >= 480px = 30em hasta infinito */
+}
+
+@media screen and (min-width: 48em) { /* ancho viewport >= 768px = 48em */
+    .card {
+        box-shadow: inset 0px 0px 8px -2px #fff;
+
+        /* (100% ancho del <div class="page_wrap">) / (3 columnas de Flex Items) = 33.3333333333%
+        (33.3333333333%) - (10px de la propiedad column-gap: ) */
+        flex: 0 0 calc(33.3333333333% - 10px);
+    }
+}
+
+/* -------------------- estrellas amarillas -------------------- */
+
+@media screen and (min-width: 20em) { /* ancho viewport >= 320px = 20em */
+    .contenedor_estrellas {
+        width: 60%;
+    }
+}
+
+/* -------------------- Galeria de Imagenes (Masonry Layout) Usando Flexbox -------------------- */
+
+/* https://css-tricks.com/adaptive-photo-layout-with-flexbox/#aa-portrait */
+@media screen and (max-aspect-ratio: 1/1) { /* viewport con las mismas medidas de anchoXalto */
+    .flex_container_gallery li {
+        height: 30vh;
+    }
+}
+
+/* https://css-tricks.com/adaptive-photo-layout-with-flexbox/#aa-short-screens */
+@media screen and (max-height: 30em) { /* alto viewport <= 480px = 30em */
+    .flex_container_gallery li { height: 80vh; }
+
+    .flex_container_gallery img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .flex_container_gallery .empty_item { display: none; }
+}
+
+/* https://css-tricks.com/adaptive-photo-layout-with-flexbox/#aa-smaller-screens-portrait */
+@media screen and (max-aspect-ratio: 1/1) and (max-width: 30em) { /* (anchoXalto viewport es igual) AND (ancho viewport <= 480px = 30em) */
+    .flex_container_gallery { flex-direction: row; }
+
+    .flex_container_gallery li {
+        width: 100%;
+        height: auto;
+    }
+
+    .flex_container_gallery img {
+        display : block;
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}
