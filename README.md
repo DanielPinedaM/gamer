@@ -1,7 +1,11 @@
 # Gamer
 
 Diseño de la interfaz gráfica de una página web Responsive en HTML 5 y CSS 3 para la venta de computadores :computer:
-****
+
+[**Ver página web en GitHub Pages**](https://danielpinedam.github.io/gamer/)
+
+------------
+
 ![1_readme.PNG](assets/img/1_readme.PNG)
 
 ------------
@@ -18,4 +22,4 @@ Diseño de la interfaz gráfica de una página web Responsive en HTML 5 y CSS 3 
 
 ------------
 
-![5_readme.PNG](assets/img/5_readme.PNG)
+![5_readme.PNG](assets/img5_readme.PNG)
