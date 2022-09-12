@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- estilos css -->
+        <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/style_autoprefixer_minifier.css" />
+
+        <!--
+        font-family: google fonts
+        https://fonts.google.com/specimen/Raleway?query=raleway
+        ExtraLight 200
+        Medium 500
+        Bold 700
+        Black 900
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;700;900&display=swap" rel="stylesheet">
+
+        <!--
+        Favicon
+        https://youtu.be/1KwfE5NrKU0
+        https://www.favicon-generator.org/
+        -->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/img/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Gamer 🎮</title>
+    </head>
+
+    <body>
+
+        <!-- encabezado -->
+        <header>
+
+            <!-- barra de navegacion: "Gamer" y imagen de carrito -->
+            <nav class="flex_contenedor_barra_navegacion">
+                <h1 class="prueba">Gamer</h1>
+
+                <div class="contenedor_carrito">
+                    <img src="assets/img/cart.png" alt="cart.png" />
+                </div>
+
+            </nav>
+
+        </header>
+
+        <!-- imagen de fondo completa de computador (hero image) -->
+        <div class="hero_image">
+            <div class="contenedor_formulario">
+
+                <h2>Pide un producto</h2>
+                <p>Todos los pedidos con descuento</p>
+
+                <!-- buscar producto -->
+                <form class="flex_contenedor_buscar">
+
+                    <div class="div_lupa_input">
+                        <input
+                        type="search"
+                        name="search"
+                        placeholder="¿Que quieres comprar?"
+                        />
+                    </div>
+                    <div class="div_lupa_imagen">
+                        <button class="buscar" type="submit">
+                            <img src="assets/img/lupa.png" alt="lupa.png" />
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <!-- barra azul -->
+        <aside>
+
+            <div class="barra">
+
+                <div class="caja_1">
+                    <div class="imagen_caja_1">
+                        <img src="assets/img/icono_1.png" alt="icono_1.png" />
+                    </div>
+                    <div class="descripcion_caja_1">
+                        <p>Nuevos <br> productos</p>
+                    </div>
+                </div>
+
+                <div class="caja_2">
+                    <div class="imagen_caja_1">
+                        <img src="assets/img/icono_2.png" alt="icono_2.png" />
+                    </div>
+                    <div class="descripcion_caja_2">
+                        <p>Somos <br> expertos</p>
+                    </div>
+                </div>
+
+                <div class="caja_3">
+                    <div class="imagen_caja_3">
+                        <img src="assets/img/icono_3.png" alt="icono_3.png" />
+                    </div>
+                    <div class="descripcion_caja_3">
+                        <p>Envios <br> gratis</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- contenido principal <main> -->
+        <main>
+            <div class="page_wrap">
+
+                <h2 class="h2_pedidos_en_linea">Pedidos en línea 🛒</h2>
+
+                <!--CARDS: Pedidos en Linea
+                    https://css-tricks.com/designing-a-product-page-layout-with-flexbox/#aa-the-products-layout -->
+                <section class="flex_contenedor_card">
+
+                    <div class="card">
+
+                        <div class="card_imagen">
+                            <img src="assets/img/producto_1_337x304.jpg" alt="producto_1_337x304.jpg" loading="lazy">
+                        </div>
+
+                        <div class="descripcion">
+                            <h5>Pc Gamer Sencilla</h5>
+                            <h6>Envio Gratis</h6>
+
+                            <div class="contenedor_estrellas">
+                                <img src="assets/img/estrellas.png" alt="estrellas.png" loading="lazy">
+                            </div>
+
+                            <div class="flex_precio">
+                                <p class="precio_antes">
+                                    $50
+                                </p>
+                                <p class="precio_ahora">
+                                    $15
+                                </p>
+                            </div>
+
+                            <a href="#" class="anadir_al_carrito">
+                                Añadir al carrito
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                <!-- aqui abajo van mas cards de Pedidos en Linea -->
+
+                    <div class="card">
+
+                        <div class="card_imagen">
+                            <img src="assets/img/producto_2_417x304.jpg" alt="producto_2_417x304.jpg" loading="lazy">
+                        </div>
+
+                        <div class="descripcion">
+                            <h5>Pc Gamer Media</h5>
+                            <h6>Envio Gratis</h6>
+
+                            <div class="contenedor_estrellas">
+                                <img src="assets/img/estrellas.png" alt="estrellas.png" loading="lazy">
+                            </div>
+
+                            <div class="flex_precio">
+                                <p class="precio_antes">
+                                    $50
+                                </p>
+                                <p class="precio_ahora">
+                                    $15
+                                </p>
+                            </div>
+
+                            <a href="#" class="anadir_al_carrito">
+                                Añadir al carrito
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+
+                        <div class="card_imagen">
+                            <img src="assets/img/producto_3_469x304.jpg" alt="producto_3_469x304.jpg" loading="lazy">
+                        </div>
+
+                        <div class="descripcion">
+                            <h5>Pc Gamer Alta</h5>
+                            <h6>Envio Gratis</h6>
+
+                            <div class="contenedor_estrellas">
+                                <img src="assets/img/estrellas.png" alt="estrellas.png" loading="lazy">
+                            </div>
+
+                            <div class="flex_precio">
+                                <p class="precio_antes">
+                                    $50
+                                </p>
+                                <p class="precio_ahora">
+                                    $15
+                                </p>
+                            </div>
+
+                            <a href="#" class="anadir_al_carrito">
+                                Añadir al carrito
+                            </a>
+
+                    </div>
+
+                </div>
+
+                    <div class="card">
+
+                        <div class="card_imagen">
+                            <img src="assets/img/producto_4_508x304.jpg" alt="producto_4_508x304.jpg" loading="lazy">
+                        </div>
+
+                        <div class="descripcion">
+                            <h5>Pc Gamer Sencilla</h5>
+                            <h6>Envio Gratis</h6>
+
+                            <div class="contenedor_estrellas">
+                                <img src="assets/img/estrellas.png" alt="estrellas.png" loading="lazy">
+                            </div>
+
+                            <div class="flex_precio">
+                                <p class="precio_antes">
+                                    $50
+                                </p>
+                                <p class="precio_ahora">
+                                    $15
+                                </p>
+                            </div>
+
+                            <a href="#" class="anadir_al_carrito">
+                                Añadir al carrito
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+
+                        <div class="card_imagen">
+                            <img src="assets/img/producto_5_464x304.jpg" alt="producto_5_464x304.jpg" loading="lazy">
+                        </div>
+
+                        <div class="descripcion">
+                            <h5>Pc Gamer Media</h5>
+                            <h6>Envio Gratis</h6>
+
+                            <div class="contenedor_estrellas">
+                                <img src="assets/img/estrellas.png" alt="estrellas.png" loading="lazy">
+                            </div>
+
+                            <div class="flex_precio">
+                                <p class="precio_antes">
+                                    $50
+                                </p>
+                                <p class="precio_ahora">
+                                    $15
+                                </p>
+                            </div>
+
+                            <a href="#" class="anadir_al_carrito">
+                                Añadir al carrito
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+
+                        <div class="card_imagen">
+                            <img src="assets/img/producto_6_536x304.jpg" alt="producto_6_536x304.jpg" loading="lazy">
+                        </div>
+
+                        <div class="descripcion">
+                            <h5>Pc Gamer Alta</h5>
+                            <h6>Envio Gratis</h6>
+
+                            <div class="contenedor_estrellas">
+                                <img src="assets/img/estrellas.png" alt="estrellas.png" loading="lazy">
+                            </div>
+
+                            <div class="flex_precio">
+                                <p class="precio_antes">
+                                    $50
+                                </p>
+                                <p class="precio_ahora">
+                                    $15
+                                </p>
+                            </div>
+
+                            <a href="#" class="anadir_al_carrito">
+                                Añadir al carrito
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+        <!-- Galeria de Imagenes (Masonry Layout) Usando Flexbox -->
+
+        <section>
+            <h2 class="h2_galeria">Galeria 📷</h2>
+
+            <ul class="flex_container_gallery">
+                <li>
+                    <img src="assets/img/galeria_1.jpg" alt="galeria_1.jpg" loading="lazy">
+                </li>
+
+                <li>
+                    <img src="assets/img/galeria_2.jpg" alt="galeria_2.jpg" loading="lazy">
+                </li>
+
+                <li>
+                    <img src="assets/img/galeria_3.jpg" alt="galeria_3.jpg" loading="lazy">
+                </li>
+
+                <li>
+                    <img src="assets/img/galeria_4.jpg" alt="galeria_4.jpg" loading="lazy">
+                </li>
+
+                <li>
+                    <img src="assets/img/galeria_5.jpg" alt="galeria_5.jpg" loading="lazy">
+                </li>
+
+                <li>
+                    <img src="assets/img/galeria_6.jpg" alt="galeria_6.jpg" loading="lazy">
+                </li>
+
+                <!-- https://css-tricks.com/adaptive-photo-layout-with-flexbox/#aa-last-row-stretchiness -->
+                <li class="empty_item"></li>
+            </ul>
+
+        </section>
+
+        <!-- Formulario Contactanos -->
+        <form class="formulario_contactanos">
+            <h2 class="h2_contactanos">Contactanos 💬</h2>
+
+            <input placeholder="Nombre" type="text" name="nombre_completo" required>
+            <input placeholder="Correo" type="email" name="correo" required>
+            <textarea placeholder="Comentarios" name="mensaje" cols="1" rows="6" required></textarea>
+
+            <button type="submit" class="enviar">
+                Enviar
+            </button>
+        </form>
+
+        <!-- pie de pagina -->
+        <footer>
+
+            <ul class="footer_lista">
+                <li>
+                    <img
+                        src="assets/img/domicilio.png"
+                        alt="domicilio.png"
+                        class="icono_lista"
+                        loading="lazy"
+                    />
+                    <a href="#" class="footer_enlace">Pedidos a domicilio</a>
+                </li>
+                <li>
+                    <img
+                        src="assets/img/linea.png"
+                        alt="linea.png"
+                        class="icono_lista"
+                        loading="lazy"
+                    />
+                    <a href="#" class="footer_enlace">Pedidos en linea</a>
+                </li>
+                <li>
+                    <img
+                        src="assets/img/telefono.png"
+                        alt="telefono.png"
+                        class="icono_lista"
+                        loading="lazy"
+                    />
+                    <a href="#" class="footer_enlace">Pedidos por telefono</a>
+                </li>
+                <li>
+                    <img
+                        src="assets/img/garantia.png"
+                        alt="garantia.png"
+                        class="icono_lista"
+                        loading="lazy"
+                    />
+                    <a href="#" class="footer_enlace">Garantía</a>
+                </li>
+                <li>
+                    <img
+                        src="assets/img/componentes.png"
+                        alt="componentes.png"
+                        class="icono_lista"
+                        loading="lazy"
+                    />
+                    <a href="#" class="footer_enlace">Componentes</a>
+                </li>
+                <li>
+                    <img
+                        src="assets/img/fabrica.png"
+                        alt="fabrica.png"
+                        class="icono_lista"
+                        loading="lazy"
+                    />
+                    <a href="#" class="footer_enlace">Fábrica</a>
+                </li>
+                <li>
+                    <img
+                        src="assets/img/ubicacion.png"
+                        alt="ubicacion.png"
+                        class="icono_lista"
+                        loading="lazy"
+                    />
+                    <a href="#" class="footer_enlace">Ubicación</a>
+                </li>
+                <li>
+                    <img
+                        src="assets/img/contactenos.png"
+                        alt="contactenos.png"
+                        class="icono_lista"
+                        loading="lazy"
+                    />
+                    <a href="#" class="footer_enlace">Contáctenos</a>
+                </li>
+            </ul>
+
+        </footer>
+
+    </body>
+
+</html>

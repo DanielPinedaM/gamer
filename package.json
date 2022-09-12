@@ -1,0 +1,15 @@
+{
+  "name": "Gamer",
+  "version": "1.0.0",
+  "description": "Diseño de la interfaz gráfica de una página web Responsive en HTML 5 y CSS 3 para la venta de computadores :computer:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
