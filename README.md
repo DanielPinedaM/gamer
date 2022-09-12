@@ -22,4 +22,4 @@ Diseño de la interfaz gráfica de una página web Responsive en HTML 5 y CSS 3 
 
 ------------
 
-![5_readme.PNG](assets/img5_readme.PNG)
+![5_readme.PNG](assets/img/5_readme.PNG)
